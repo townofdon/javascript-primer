@@ -25,7 +25,7 @@ What will this course cover?
   - timers
   - async code
   - events
-  - data fetching && data persistence
+  - data fetching `&&` data persistence
   - classes
 - Integration into real-world applications
   - HTML DOM events (intercept user input and USE IT _mwa ha ha_)
@@ -45,4 +45,4 @@ What this course does NOT cover:
 - Decorators (an advanced topic utilized in < 1% of applications)
 - Framework-specific code, like React, Vue.js, Angular, etc.
 - How to get rich quickly
-- How to win friends && influence people
+- How to win friends `&&` influence people
