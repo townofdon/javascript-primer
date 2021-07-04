@@ -10,6 +10,8 @@ Javascript primitive data types include the following:
 There are more primitives Than those listed above, however I've found that thees primitives
 cover the vast majority of software development needs.
 
+Let's break down what each of these primitive types are.
+
 ## Numbers
 
 Numbers are discrete mathematical units used to quantify or measure things. In the code world
@@ -24,15 +26,18 @@ console.log(numCars + numBoats + numAirplanes); // >> outputs "15"
 
 Numbers in Javascript are floating point numerical representations. WUT?!
 
-In simpler terms, this just lets us use decimal points in our numbers and it just works. (In other programming
-languages you have to specify the right data type if you want to use decimals).
+In simpler terms, this just lets us use decimal points in our numbers and it just works.
+
+In other programming languages (such as C++ or Java), you would need to declare the **type** of number
+you want to use, like integer, float, double, long, etc. In Javascript, we have one number type to
+rule them all, and decimal points work out of the box with no additional hoopla.
 
 ```
 // very crude approximation of PI - Note that `Math.PI` holds this constant with a decent level of precision
 var PI = 3.14159;
 ```
 
-See [next section for some Mathematical Operators](./05-mathematical-operators.md) you can use in Javascript.
+See [next section for some Mathematical Operators](./06-mathematical-operators.md) you can use in Javascript.
 
 > Nerd note: Numbers are all instances of the global `Number` object and thus have **properties** and **methods** (in this way, they are like **objects**) - see [MDN Number documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) for a deeper dive.
 
@@ -51,9 +56,21 @@ var isAnOldManFilledWithRegret = false;
 
 > Don's Opinionated Note: I like to prefix `boolean` variables _(we'll learn about those soon)_ with "is" or "has" as much as possible - this makes code more consistent and easier to understand.
 
+> On a related note, computers are built on nothing other than 1's and 0's. Transistors use a myriad of
+complex logic gates (a gate just means ON or OFF, or OPEN or CLOSED) to handle every computer instruction,
+from painting lines on a spreadsheet to displaying the individual pixels in image files to storing and
+updating memory, etc. The systems are diverse and complex, but built on top of the supremely primitive
+concept of a boolean - ON or OFF.
+
 ## Strings
 
-These deserve a [whole chapter of their own](./06-strings.md).
+These deserve a [whole chapter of their own](./07-strings.md).
+
+In short, strings represent textual data. Things such as:
+
+- Your first name
+- The name of your restaurant
+- Your favorite color
 
 ## Null / Undefined
 
@@ -73,7 +90,7 @@ An `undefined` value represents the absence of space and time. This is the dark 
 - `null` and `undefined` just mean that something isn't there
 - `null` and `undefined` are NOT considered strictly identical _(key word "strictly")_
 
-Run the following code in RunJS and ponder. If it goes over your head, DON'T WORRY! _(This is one of the quircks of Javascript; we also haven't covered logical operators yet)_:
+Run the following code in RunJS and ponder. If it goes over your head, DON'T WORRY! _(This is one of the quirks of Javascript; we also haven't covered logical operators yet)_:
 
 ```
 null == undefined // >> true
@@ -91,8 +108,8 @@ Symbols are a recent addition to Javascript, and are used to specify unique iden
 
 _No need to worry about `symbol`s for now._
 
-&nbsp;
+&nbsp;  
 
 &nbsp;
 
-Phew, that's a lot of information. Reward yourself with a scone and cup of coffee/tea/kombucha for all the knowledge you just gained.
+Phew, that's a lot of information. Reward yourself with a snack and cup of coffee/tea/kombucha for all the knowledge you just gained.
