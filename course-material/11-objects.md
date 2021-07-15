@@ -29,11 +29,11 @@ const person = {
 };
 ```
 
-Objects can have **methods** (functions - you will learn about these soon):
+Objects can have **methods** (these are just **functions**):
 
 ```
 const person = {
-  applyToNewJob() {
+  applyToJob() {
     console.log('applying to a rad job!');
   },
   driveCar() {
