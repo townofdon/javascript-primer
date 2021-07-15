@@ -42,7 +42,7 @@ Notice how easy it was to mutate (change) the value of the variable `name` in th
 
 ### `var`
 
-This was used mainly in earlier versions of Javascript. It is generally now recommended to use `let` or `const` instead.
+This was used mainly in earlier versions of Javascript. **It is generally now recommended to use `let` or `const` instead.**
 
 Any variable instantiated (created) using `var` can be `reassigned` any number of times.
 
@@ -54,7 +54,7 @@ var age = 33;
 age = 25;
 ```
 
-Changing any variable's value is considered a **data mutation**. More on this later.
+> Nerd note: changing any variable's value is considered a **data mutation**. More on this later.
 
 ### `let`
 
@@ -64,7 +64,9 @@ The assignment keyword `let` works exactly the same as `var`, except is generall
 let numCars = 2;
 
 // just bought a new car!
-numCars = 3; // NOTE - there is a better way to do this - see below.
+numCars = 3;
+
+// NOTE - there is a better way to increment a number - see below.
 ```
 
 ### `const`
@@ -147,8 +149,11 @@ In Javascript, here are some industry-standard naming conventions:
 
 All you need to know for the time being:
 
-- use `let` and `const`
+- use `let` - if a variable's value will need to change
+- use `const` - if a variable's value will NEVER change*
 - do NOT use `var`
+
+> Nerd note: objects and arrays should always use `const` even if they will be mutated. This is because JS objects are always assigned **by reference**. Instantiating an object with `const` is just saying that we won't ever be reassigning that object's pointer reference.
 
 ---
 

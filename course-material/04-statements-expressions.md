@@ -152,3 +152,9 @@ If you absorbed nothing else from the information presented above - here's all y
 - Javascript statements are a set of instructions performed one-by-one
 - Javascript expressions get evaluated left-to-right
 - You can have multiple expressions in a single statement
+
+## Additional Resources for Statements and Expressions:
+
+- https://masteringjs.io/tutorials/fundamentals/expressions
+- https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
