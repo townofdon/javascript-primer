@@ -1,8 +1,10 @@
 # Control Flow - Logic
 
-We covered conditionals a few lessons ago. However, our examples dealt with strictly `true` or `false` cases. In the real world, things are often not that cut and dry. What if some things are true and others false?
+Our examples until now have just dealt with strinctly `true` or `false` cases.
 
-We need to figure out a way to boil something down to a `true` or `false` state.
+In the real world, things are often not that cut and dry. Is the airplane ready for flight? That is a whole checklist of items (conditions that need to be satisfied).
+
+We need to figure out a way to boil lots of conditions down to a single `true` or `false` state.
 
 Enter the world of logic!
 
@@ -18,14 +20,16 @@ Here's how these operators work:
 // negate a condition
 !true; // >> evaluates to `false`
 
-// combine two conditions with OR
+// true if EITHER condition is true
 false || true; // >> evaluates to `true`
 
-// conbine two conditions with AND
+// true if BOTH conditions are true
 true && false; // >> evaluates to `false`;
 ```
 
-But a Javascript programmer would never write code like the above. Instead logical operators are typically used with variables:
+Easy peasy.
+
+Let's see how this aristotelian logic gets applied in an albeit contrived example:
 
 ```javascript
 const hasWashedDishes = true;
@@ -68,8 +72,13 @@ true;
 We can also chain our logic into complex spaghetti-code! However just because you CAN do something doesn't mean that you SHOULD.
 
 ```javascript
-// inferior way - logic spaghetti
-if (!isLoading && !(hasError || errMessage) && (getHasPermission('view-all-grades') || isOwner) && getHasFeatureFlag('grade-management')) {
+// inferior way - logic is complex, brittle, and more error-prone
+if (
+  !isLoading &&
+  !(hasError || errMessage) &&
+  (isOwner || getHasPermission('view-all-grades')) &&
+  getHasFeatureFlag('grade-management')
+) {
   renderGradesListView();
 }
 
@@ -77,9 +86,10 @@ if (!isLoading && !(hasError || errMessage) && (getHasPermission('view-all-grade
 // - easier to read && reason about code
 // - easier to modify
 // - easier to manage which conditions have priority
+// - can more easily unit-test this function
 function getShouldRenderGradesListView() {
   if (isLoading) return false;
-  if (hasError) return false;
+  if (hasError || errMessage) return false;
   if (!getHasFeatureFlag('grade-management')) return false;
   if (!isOwner && !getHasPermission('view-all-grades')) return false;
   return true;
@@ -90,7 +100,9 @@ if (getShouldRenderGradesListView()) {
 }
 ```
 
-Ahhh, refactoring. Learn to love it. Do future-you a favor. Rewrite your nested, complex logic until it's stupid-simple. You'll thank me later.
+Ahhh, refactoring. Learn to love it.
+
+Do future-you a favor. Rewrite your nested, complex logic until it's stupid-simple. You'll thank me later.
 
 > Side note: it's an ongoing struggle to walk the tightrope of not refactoring enough, and over-engineering code for a feature that could wind up being thrown out entirely. A simple rule-of-thumb is to let yourself write messy code while prototyping, but clean it up after you find a pattern you want to commit to.
 
@@ -131,7 +143,7 @@ if (undefined) {
 This may make more sense when we use variables inside of conditionals:
 
 ```javascript
-// change this to a negative value and see what happens
+// EDGE-CASE: change this to a negative value and see what happens
 const numDollars = 0;
 if (numDollars) {
   console.log("you got money in the bank!");
@@ -140,7 +152,19 @@ if (numDollars) {
 }
 ```
 
-> Link: [MDN docs - complete list of JavaScript falsy values](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+The above example contains a seemingly innocuous bug. This is because bank balances can go negative, and negative values are NOT falsey. The bug fix would be as follows:
+
+```diff
+const numDollars = 0;
+- if (numDollars) {
++ if (numDollars > 0) {
+  console.log("you got money in the bank!");
+} else {
+  console.log("you broke!");
+}
+```
+
+> Best practice: prefer explicit logic over falsey values when possible. It's worth the slight increase in code size to have better app stability. Always assume bad input is possible. Only utilize falsey conditional checks if you REALLY understand the implications forwards and backwards.
 
 ## Short Circuiting
 
@@ -155,9 +179,9 @@ const b = () => { console.log('b'); return true; }
 if (a() && b()) { console.log('c'); return true; }
 ```
 
-Q: Will `"b"` ever be printed to the console?
+**Q**: Will `"b"` ever be printed to the console?
 
-A: No! After evaluating `a()`, the result is `false`. Since `false || <any_value>` evaluates to `false`, we can safely ignore anything that follows the `||` operator. And this is exactly what the interpreter does.
+**A**: No! After evaluating `a()`, the result is `false`. Since `false && <any_value>` evaluates to `false`, we can safely ignore anything that follows the `&&` operator. And this is exactly what the interpreter does.
 
 ## ADVANCED - Optional Chaining
 
