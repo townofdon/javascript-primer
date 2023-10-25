@@ -19,6 +19,6 @@ bosses in Hollow Knight (_one day I'll beat the final pantheon!!_ :fist_raised:)
 
 ## Links
 
-- [YouTube - Don Juan Codes](https://www.youtube.com/channel/UC0s6jJw80V6-qG9KkUVjXfA)
+- [YouTube - Forerunner Dev](https://www.youtube.com/channel/UC0s6jJw80V6-qG9KkUVjXfA)
 - [GitHub](https://github.com/townofdon)
 - [LinkedIn](https://www.linkedin.com/in/townsenddon/)
