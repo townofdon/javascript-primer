@@ -95,7 +95,7 @@ const superhero = {
   name: 'Dapper Debonair',
   alias: 'Dominique Dubois',
   useAbility: () {
-    console.log('SMAAASH!!);
+    console.log('SMAAASH!!');
   },
 };
 
