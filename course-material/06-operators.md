@@ -89,4 +89,4 @@ Math.sqrt(16); // outputs `16`
 
 ```
 
-See the Math docs for more possible uses!
+See the [Math docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) for more possible uses!

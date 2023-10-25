@@ -174,29 +174,30 @@ If we combine early returns and the `switch` statement, we get what I consider
 one of the most elegant patterns in Javascript:
 
 ```javascript
-const swallow = {
-  // try changing this to a different type
-  type: 'african',
-};
-
 function getSwallowDescription(swallow) {
   switch (swallow.type) {
     case 'african':
       return 'African swallows are not migratory!';
     case 'european':
       return 'European swallows could not carry two coconuts; it\'s a simple matter of weight ratios!';
-    case 'austrailian':
+    case 'australian':
       return 'Now that\'s a big bird!';
     default:
       return 'This type of swallow is unknown to us';
   }
 }
 
-console.log(getSwallowDescription());
+function test() {
+  const swallow = {
+    // try changing this to a different type
+    type: 'african',
+  };
+  console.log(getSwallowDescription(swallow));
+}
 ```
 
-Now, I will admit that some people gripe about this potentially opening up the possibility of forgetting a `break`
+> **Semantic qualifier**: Now, I will admit that some people gripe about this potentially opening up the possibility of forgetting a `break`
 statement if the developer refactors and removes the `return`. However, to mitigate this, my personal rule of thumb is to
 ALWAYS use only `return` statements OR `break` statements exclusively, never mixing them together.
 
-I use this pattern ALL THE TIME and highly recommend adding this pattern to your code arsenal.
+I use the early-return pattern ALL THE TIME and highly recommend adding this pattern to your code arsenal.

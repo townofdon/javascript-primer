@@ -173,6 +173,7 @@ var lastName = "Juan";
 Some best practices and things I generally recommend:
 
 - Default to single quote strings for normal usage
+- Favor template literals (`` `${firstName} ${lastName}` ``) over concatenation (`firstName + ' ' + lastName`)
 
 ## Additional Resources
 

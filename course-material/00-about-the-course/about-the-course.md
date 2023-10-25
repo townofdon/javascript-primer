@@ -4,11 +4,11 @@ Why another Javascript course?
 
 - Most tutorials only cover the bare essentials
 - Real-world application - be able to answer "will I ever actually use this?"
-- Accumulated nuggets of wisdom from 8+ years in the industry
+- Accumulated nuggets of wisdom from 10+ years in the industry
 - Avoid common pain points (learn from my dumb mistakes - FOR FREE!)
 - My chance to assimilate others to my coding philosophy:
   - If you can do it right the first time with minimal extra effort, DO IT
-  - Clean code saves lives
+  - Avoid needless over-engineering
   - Write maintainable code for other devs (and future-you)
   - Null-check unless you're 120% sure
   - Never trust user input
@@ -41,7 +41,7 @@ What will this course cover?
 
 What this course does NOT cover:
 
-- Generators (frankly I haven't found a solid use-case, and there are many good resources for learning about these)
+- Generators (these typically have extremely specific use cases and are not widely used)
 - Decorators (an advanced topic utilized in < 1% of applications)
 - Framework-specific code, like React, Vue.js, Angular, etc.
 - How to get rich quickly

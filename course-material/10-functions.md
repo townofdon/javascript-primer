@@ -25,7 +25,7 @@ const challengeBalrog = function() {
   console.log("YOU SHALL NOT PASS!");
 }
 
-// ES6 anonymous arrow function assigned to a variable
+// ES6 anonymous arrow function expression assigned to a variable
 const scoldPippen = () => {
   console.log("Fool of a Took!");
 };
@@ -52,6 +52,7 @@ const doStuff = function() { console.log('stuff'); }
 const doSomething = () => { console.log('something') };
 //                  ^ Anonymous function
 
+// This is an object. Don't worry about this just yet.
 const bankAccount = {
   processPayment: () => { console.log('Payment has been processed!'); }
   //              ^ Anonymous function
@@ -65,7 +66,7 @@ get confused when you hear the term.
 
 Functions can **return** values.
 
-This does two things:
+The `return` keyword does two things:
 
 - Finishes function execution (function stops running)
 - Returns the value back to the caller
@@ -119,6 +120,8 @@ plusSix(2); // 8
 plusSix(3); // 9
 ```
 
+Go ahead, copy the above example and mess around with the **parameters**.
+
 ## Function parameters
 
 Functions can specify **parameters** that they can accept when they are called.
@@ -138,12 +141,16 @@ sayHelloTo("Rico"); outputs "Howdy, Rico!"
 We can provide default values for our function parameters:
 
 ```javascript
+// default to "Stranger" if name is undefined
 function sayHelloTo(name = "Stranger") {
   console.log(`Howdy, ${name}`!);
 }
 
-sayHelloTo("Tom"); // outputs "Howdy, Tom!"
-sayHelloTo();      // outputs "Howdy, Stranger!"
+sayHelloTo("Tom");     // outputs "Howdy, Tom!"
+sayHelloTo();          // outputs "Howdy, Stranger!"
+
+// not passing any parameter is the same thing as explicitly passing `undefined`
+sayHelloTo(undefined); // outputs "Howdy, Stranger!"
 ```
 
 You can have as many or as little parameters as you like.
