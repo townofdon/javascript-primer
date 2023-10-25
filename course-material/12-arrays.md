@@ -143,7 +143,7 @@ const carManufacturers = [
   'Tesla',
   'Honda',
   'Ford',
-  'GM
+  'GM',
 ];
 const bankruptManufacturers = [];
 
@@ -211,7 +211,7 @@ const people = [
 
 // get all people who are not named "Bob"
 
-people.filter((person) => person.name !== 'bob); // ["dave", "samson", "delilah"]
+people.filter((person) => person.name !== 'bob'); // ["dave", "samson", "delilah"]
 ```
 
 ## Traversing Arrays
