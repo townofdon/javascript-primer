@@ -14,7 +14,7 @@ Functions come in many flavors.
 
 Ways to write functions (all of these are valid):
 
-```
+```javascript
 // declarative function
 function speakFriendAndEnter() {
   console.log("Mellon");
@@ -33,7 +33,7 @@ const scoldPippen = () => {
 
 And we invoke them like so - with opening and closing parentheses `()`:
 
-```
+```javascript
 speakFriendAndEnter(); // outputs "Mellon"
 challengeBalrog(); // outputs "YOU SHALL NOT PASS!"
 scoldPippen(); // outputs "Fool of a Took!"
@@ -45,7 +45,7 @@ _([He who must not be named](https://en.wikipedia.org/wiki/Lord_Voldemort))._
 
 Anonymous functions are just functions that are unnamed.
 
-```
+```javascript
 const doStuff = function() { console.log('stuff'); }
 //              ^ Anonymous function
 
@@ -70,7 +70,7 @@ This does two things:
 - Finishes function execution (function stops running)
 - Returns the value back to the caller
 
-```
+```javascript
 function add(num1, num2) {
   return num1 + num2;
   console.log("Un-reachable code!!");
@@ -94,7 +94,7 @@ The return **type** can be:
 A function that returns a function can be difficult to wrap your brain around! This is called a
 **curried** function and leads to some interesting patterns:
 
-```
+```javascript
 function add(a) {
   return function (b) {
     return a + b;
@@ -125,7 +125,7 @@ Functions can specify **parameters** that they can accept when they are called.
 
 We pass in **arguments** for those parameters when we invoke (call) a function.
 
-```
+```javascript
 function sayHelloTo(name) {
   console.log(`Howdy, ${name}`!);
 }
@@ -137,7 +137,7 @@ sayHelloTo("Rico"); outputs "Howdy, Rico!"
 
 We can provide default values for our function parameters:
 
-```
+```javascript
 function sayHelloTo(name = "Stranger") {
   console.log(`Howdy, ${name}`!);
 }
@@ -148,7 +148,7 @@ sayHelloTo();      // outputs "Howdy, Stranger!"
 
 You can have as many or as little parameters as you like.
 
-```
+```javascript
 // generally this is considered a BAD pattern:
 function sum(a, b, c, d, e, f, g) {
   return a + b + c + d + e + f + g;
@@ -165,7 +165,7 @@ You are going to see callback functions ALL THE TIME. So get used to them.
 
 Okay, a quick and dirty example:
 
-```
+```javascript
 const processPayment(onProcessingComplete) {
   // fetch user's account info...
   // determine if the user has access...

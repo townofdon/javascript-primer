@@ -14,7 +14,7 @@ An `if` statment is a way to execute varying blocks of code depending on the res
 
 Basic syntax:
 
-```
+```javascript
 if (true) {
   console.log('Look ma, no hands!');
 }
@@ -28,7 +28,7 @@ Let's break down the basic syntax:
 
 Now for an example with multiple possible outcomes:
 
-```
+```javascript
 const x = <SOME_NUMBER>; // note - this is a common way to write "pseudo-code"
 
 if (x > 4) {
@@ -49,7 +49,7 @@ Let's break down what's happening above:
 
 **If statements** can be as long or as short or as nested as you need them to be. Like this top-notch example:
 
-```
+```javascript
 // PSEUDO-CODE
 if (isDogFriendly) {
   if (isDogHouseTrained) {
@@ -68,7 +68,7 @@ if (isDogFriendly) {
 }
 ```
 
-> Note - I personally recommend making every effort to AVOID nesting conditionals. Other developers (and your future self) will thank you. Flat logical structures are much easier to wrap our reptilian brains around and less prone to bugs due to human error.
+> Note - I personally recommend making every effort to AVOID nesting conditionals (placing if-statements inside if-statements). Other developers (and your future self) will thank you. Flat logical structures are much easier to wrap our reptilian brains around and less prone to bugs due to human error.
 
 ## Else If Statement
 
@@ -77,7 +77,7 @@ Sometimes you have situations where you have a number of possible outcomes.
 In Javascript, you simply chain an additional `if` statement on the else clause to create
 a "chain" of conditional branches.
 
-```
+```javascript
 const swallow = {
   // try changing this to a different type
   type: 'african',
@@ -106,7 +106,7 @@ In the example above, there is a bit of repetition. We programmers like to avoid
 
 Let's refactor the previous example to instead utilize a switch statement (the outcome is exactly the same):
 
-```
+```javascript
 const swallow = {
   // try changing this to a different type
   type: 'african',
@@ -146,7 +146,7 @@ My rule of thumb: _return early and often_.
 
 Observe:
 
-```
+```javascript
 // Option A - with conditional branching (the ordinary way)
 function doSomething() {
   if (conditionA) {
@@ -173,7 +173,7 @@ absorb the information on the screen.
 If we combine early returns and the `switch` statement, we get what I consider
 one of the most elegant patterns in Javascript:
 
-```
+```javascript
 const swallow = {
   // try changing this to a different type
   type: 'african',

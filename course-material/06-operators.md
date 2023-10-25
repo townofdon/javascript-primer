@@ -8,7 +8,7 @@ To do so, you will need to learn your operators. Please Excuse My Dear Aunt Sall
 
 Copy and paste each of the following code blocks into RunJS _(one at a time)_, and ponder what is happening:
 
-```
+```javascript
 // ADDITION
 // - Use the `+` operator. Simple enough.
 // - when used on `number` types, sums the numbers
@@ -18,7 +18,7 @@ Copy and paste each of the following code blocks into RunJS _(one at a time)_, a
 "My " + "Cirona"; // >> outputs "My Cirona"
 ```
 
-```
+```javascript
 // SUBTRACTION
 // - Use the `-` operator.
 // - Only used on `number` types.
@@ -26,7 +26,7 @@ Copy and paste each of the following code blocks into RunJS _(one at a time)_, a
 10 - 6; // >> outputs `4`
 ```
 
-```
+```javascript
 // MULTIPLICATION
 // - use the `*` operator.
 // - only used on `number` types.
@@ -34,7 +34,7 @@ Copy and paste each of the following code blocks into RunJS _(one at a time)_, a
 9 * 9 * 9; // >> outputs `729`
 ```
 
-```
+```javascript
 // DIVISION
 // - use the `/` operator.
 // - only used on `number` types.
@@ -42,7 +42,7 @@ Copy and paste each of the following code blocks into RunJS _(one at a time)_, a
 99 / 9; // >> outputs `11`
 ```
 
-```
+```javascript
 // MODULUS
 // - use the `%` operator
 // - gets the REMAINDER of the value after division
@@ -55,7 +55,7 @@ Copy and paste each of the following code blocks into RunJS _(one at a time)_, a
 6 % 2; // >> outputs `0`;
 ```
 
-```
+```javascript
 // PARENTHESES
 // - use `(` and `)` brackets
 // - used for math operations and also JS scopes (a really advanced topic)
@@ -77,7 +77,7 @@ Copy and paste each of the following code blocks into RunJS _(one at a time)_, a
 For other math calculations, like exponents, absolute value, square root, etc., you can
 simply use the `Math` library (comes standard in all Javascript):
 
-```
+```javascript
 // ABSOLUTE VALUE
 Math.abs(-1000); // outputs `1000`
 

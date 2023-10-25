@@ -2,7 +2,7 @@
 
 Javascript primitive data types include the following:
 
-- `number` - `1`, `-20`, `3.141592653589793`, etc.
+- `number` - `1`, `-20`, `3.14`, etc.
 - `boolean` - `true` or `false`
 - `string` - `"Hello"`, `"A"`, `"b"`, `"C"`, etc.
 - `null` and `undefined`
@@ -17,7 +17,7 @@ Let's break down what each of these primitive types are.
 Numbers are discrete mathematical units used to quantify or measure things. In the code world
 they operate much the same:
 
-```
+```javascript
 var numCars = 3;
 var numBoats = 5;
 var numAirplanes = 7;
@@ -32,7 +32,7 @@ In other programming languages (such as C++ or Java), you would need to declare 
 you want to use, like integer, float, double, long, etc. In Javascript, we have one number type to
 rule them all, and decimal points work out of the box with no additional hoopla.
 
-```
+```javascript
 // very crude approximation of PI - Note that `Math.PI` holds this constant with a decent level of precision
 var PI = 3.14159;
 ```
@@ -49,7 +49,7 @@ A boolean is just a data type with a value of `true` or a `false`, (`1` or `0`).
 
 These are very convenient for turning things ON or OFF, or setting code flags (`isEnabled`, `isProcessing`), etc.
 
-```
+```javascript
 var isSuperDapper = true;
 var isAnOldManFilledWithRegret = false;
 ```
@@ -84,7 +84,7 @@ An `undefined` value represents the absence of space and time. This is the dark 
 
 > Side note: `null` and `undefined` are what we call **falsey** values. You'll learn all about truthiness / falsiness later (and no, it unfortunately has nothing to do with Stephen Colbert).
 
-**What you NEED TO KNOW about `undefined` vs. `null`?**
+**What do you NEED TO KNOW about `undefined` vs. `null`?**
 
 - Starting out, not much!
 - `null` and `undefined` just mean that something isn't there
@@ -92,7 +92,7 @@ An `undefined` value represents the absence of space and time. This is the dark 
 
 Run the following code in RunJS and ponder. If it goes over your head, DON'T WORRY! _(This is one of the quirks of Javascript; we also haven't covered logical operators yet)_:
 
-```
+```javascript
 null == undefined // >> true
 null === undefined // >> false
 ```

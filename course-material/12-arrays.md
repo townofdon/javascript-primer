@@ -20,7 +20,7 @@ Arrays can have lots of different types of values:
 
 Take this hodge podge for instance:
 
-```
+```javascript
 const anObfuscatedAndOverlyComplexCollection = [
   0, // number
   "howdy pardner!", // string
@@ -50,7 +50,7 @@ We get an individual element from an array by accessing its **index**.
 
 Arrays are **zero-indexed**, which means we just start counting from 0 instead of 1.
 
-```
+```javascript
 const llamas = [
   'fred',
   'susan',
@@ -80,7 +80,7 @@ We can add items to an array two ways:
 
 - method 1: `arr.push( ... )`
 
-  ```
+  ```javascript
   const dogs = [
     'fluffer',
     'ralph',
@@ -92,7 +92,7 @@ We can add items to an array two ways:
 
 - method 2: `arr.concat([ ... ])`
 
-  ```
+  ```javascript
   const myDogs = [
     'maggie',
   ];
@@ -119,7 +119,7 @@ Since computers nowadays are so fast, it is generally considered safer to NOT mu
 
 I'll show how to remove items from an array both ways - with and without data mutation.
 
-```
+```javascript
 const fruits = [
   'apple',
   'banana',
@@ -138,7 +138,7 @@ console.log(removedFruit); // outputs "apple"
 
 We remove items from the end of an array by using the **mutating** method `arr.shift()`:
 
-```
+```javascript
 const carManufacturers = [
   'Tesla',
   'Honda',
@@ -169,7 +169,7 @@ So how the heck do we add stuff or remove stuff from an array without changing t
 
 Like this:
 
-```
+```javascript
 const customerIds = [1441, 2992, 3443, 4004];
 
 // REMOVE CUSTOMER "3443" FROM ARRAY:
@@ -201,7 +201,7 @@ There are loads of ways to modify an array. Let me touch on a few things:
 
 `arr.filter` returns a new array where the **predicate** (the callback function) evaluates to **truthy**.
 
-```
+```javascript
 const people = [
  'bob',
  'dave',
@@ -219,7 +219,7 @@ people.filter((person) => person.name !== 'bob); // ["dave", "samson", "delilah"
 We can **traverse** (or **iterate**) over arrays by using a **loop**. We will learn about loops
 in the next section, but take this simple example in the meantime:
 
-```
+```javascript
 const presidents = [
   'George Washington',
   'John Adams',

@@ -26,7 +26,7 @@ All of the above strings evaluate to the same primitive value of `"Hello World"`
 
 Try copying and pasting the following code into RunJS:
 
-```
+```javascript
 "Hello World";
 'Good to see you today';
 `My name is Neo`;
@@ -40,7 +40,7 @@ evaluated result of each expression (which incidentally is also a statement in t
 
 One of the most common things we will need to do is combine strings together.
 
-```
+```javascript
 // a basic string
 "Hola Mundo"; // "Hola Mundo"
 
@@ -50,7 +50,7 @@ One of the most common things we will need to do is combine strings together.
 "One small step for doge, " + "one giant leap for Elon Musk";
 ```
 
-```
+```javascript
 // full-fledged example using variables (this is a very common use-case)
 var firstName = "Paul"
 var lastName = "Progeny"
@@ -83,7 +83,7 @@ Placeholder values are specified using a dollar sign and brackets: `${...}`
 
 Example:
 
-```
+```javascript
 var name = 'John Boy';
 var movie = 'The Matrix';
 `My name is ${name} and my favorite movie is ${movie}`;
@@ -110,7 +110,7 @@ Both **properties** and **methods** utilize the dot operator `.` to access them.
 
 Examples:
 
-```
+```javascript
 'Wiley Coyote'.length; // `12`
 
 'Bob Ross'.charAt(1); // "o"
@@ -142,13 +142,13 @@ One way would be to wrap the string in double quotes like: `"`"`.
 Another method is to escape our characters. We simply add a backwards-slash `\`
 before the culprit and all is golden.
 
-```
+```javascript
 'Scott\'s house is cool'; // result: "Scott's house is cool"
 ```
 
 ## More String Examples - recap
 
-```
+```javascript
 // string with double quotes
 "Bob Ross";
 

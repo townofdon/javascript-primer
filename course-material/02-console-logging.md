@@ -4,7 +4,7 @@
 
 Copy and paste the following code block into RunJS:
 
-```
+```javascript
 console.log("hola mundo");
 ```
 
@@ -20,7 +20,7 @@ Cons of `console.log`
 - some things are difficult to log, like deep function call stacks
 - logging can get very tedious
 - easy to forget to clean up logs once you don't need them anymore
-- more sophisticated debugging exists, like setting breakpoints and attaching debugger processes, but these require 
+- more sophisticated debugging exists, like setting breakpoints and attaching debugger processes, but these require
   additional setup and can be confusing
 
 ## Other console logging (Advanced)
@@ -37,13 +37,18 @@ But, for those who like to dive deeper, here are some additional ways to log stu
 - in a browser console this will show up as red text
 - however, in the terminal / command line, will show up as regular text
 
+**`console.warn`**
+
+- prints a warning
+- in the browser console this will show up as yellow text
+
 **`console.table`**
 
 - way to print tabular data, like an array of objects
 
   e.g.
 
-  ```
+  ```javascript
   // copy and paste the following into RunJS:
   console.table([
     { name: 'Peter', age: 42, favoriteColor: 'orange' },

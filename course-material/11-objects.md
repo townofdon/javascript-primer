@@ -8,7 +8,7 @@ We use objects to represent (model) things in the real world. At least that's ho
 
 ## Basic object syntax
 
-```
+```javascript
 const car = {
   make: 'Honda',
   model: 'Accord',
@@ -21,7 +21,7 @@ Trailing commas make it easy to add new information to an object without worryin
 
 Object can have **properties**:
 
-```
+```javascript
 const person = {
   name: 'Dave', // string
   age: 32, // number
@@ -31,7 +31,7 @@ const person = {
 
 Objects can have **methods** (these are just **functions**):
 
-```
+```javascript
 const person = {
   applyToJob() {
     console.log('applying to a rad job!');
@@ -44,7 +44,7 @@ const person = {
 
 Objects can even have nested **objects** and **arrays** (we will cover arrays in the next section):
 
-```
+```javascript
 const airplane = {
   // NESTED OBJECT:
   manufacturer: {
@@ -88,7 +88,7 @@ The possibilities are limitless.
 
 We access properties and methods of an object by using the dot `.` notation.
 
-```
+```javascript
 const superhero = {
   power: 100,
   specialAbility: 'super-smash',
@@ -126,7 +126,7 @@ Pointers just mean that we are pointing to a memory address on our computer's RA
 
 Anytime we instantiate a new object, we are actually creating a new **pointer** (as well as the underlying data).
 
-```
+```javascript
 // first, we instantiate a new object and assign it to the variable `x`
 const x = { a: 1 };
 

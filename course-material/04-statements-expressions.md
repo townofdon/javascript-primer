@@ -23,7 +23,7 @@ To demonstrate this, try the following:
 - Check the box to enable `Show Line Numbers`, and close the window
 - Paste the following snippet into RunJS:
 
-```
+```javascript
 console.log('I am on line one!');
 console.log('I am on line two!');
 console.log('I am on line three!');
@@ -47,7 +47,7 @@ The statements are executed, one by one, in the same order as they are written.
 
 Semicolons separate JavaScript statements.
 
-```
+```javascript
 let a = 1 + 2;             // statement one
 const b = "Howdy Pardner"; // statement two
 fireRocketShip();          // statement three
@@ -56,7 +56,7 @@ fireRocketShip();          // statement three
 You can also have multiple statements on the same line of code (however this is generally NOT recommended as
 it impairs code readability):
 
-```
+```javascript
 const a = 1; const b = 2; const c = 3;
 ```
 
@@ -72,7 +72,7 @@ In Javascript, an **expression** is a unit of code that can be reduced to a sing
 
 A good example of this is compound expressions on the right-hand side of an assignment operator (`=`):
 
-```
+```javascript
 // This syntax may look strange, but is perfectly valid.
 // The example breaks up the statements so that one is one each line.
 var result = (1 + 1)  // expression one
@@ -82,7 +82,7 @@ var result = (1 + 1)  // expression one
 
 The JS engine will **evaluate** the above expressions like so:
 
-```
+```javascript
 // PSEUDO-CODE - steps of evaluating above expressions:
 (1 + 1) + (2 + 2) + (3 + 3) // step 1
 2       + (2 + 2) + (3 + 3) // step 2
@@ -97,12 +97,12 @@ var result = 12;
 Note that the **parentheses** `(...)` in the code above only used to demonstrate the grouping of various
 expressions. However, parentheses are the go-to way to insert additional complex expressions into a statement:
 
-```
+```javascript
 // The expression inside the PARENTHESES gets evaluated first (x + y) before multiplication (*) operator
 const calculated = ( calculateComplexFormula() + getOffsetNum() ) * getScalarNum();
 ```
 
-That example was deliberately obtuse... all you need to know is that **parentheses** can be used
+That example above was deliberately obtuse... all you need to know is that **parentheses** can be used
 to group expressions, and sub-expressions, and sub-sub-expressions... you get the point.
 
 ### Left-to-Right Evaluation
@@ -112,7 +112,7 @@ Javascript always evaluates **expressions** from left-to-right.
 Consider the following example (DON'T worry about understanding `function`, `const`, assignment `=`, etc.,
 just consider the ORDER of how the expressions get evaluated):
 
-```
+```javascript
 // -- copy and paste this example into RunJS --
 
 function a() { console.log('a'); return 1; }

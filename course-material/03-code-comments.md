@@ -13,7 +13,7 @@ my philosophy of not being lazy and adding comments where they are needed.
 
 These are denoted by two forward-slash characters: `//`
 
-```
+```javascript
 // this is a single line comment
 
 // single-line comments can go above an expression (RECOMMENDED)
@@ -40,7 +40,7 @@ a quick shortcut to quickly comment out multiple lines of code is to do the foll
 Multi-line comments are denoted by starting with `/*` and ending with `*/`. Anything in between will
 be treated as a comment.
 
-```
+```javascript
 /*
 This is commented code. You can tell a story about your best friend Dave, or probably more likely,
 walk another developer (or in all likelihood future-you) through design decisions behind a feature,
